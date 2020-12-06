@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    cards = cards.concat(cards);
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+               while (0 !== currentIndex) {
+                   randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+                   temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+      }
+      suffle(cards)
+      const timeCounter = new Date(2020, 0, 0, 0, 0, 0, 0);
+const displayTime = () => clock.innerHTML = timeCounter.toTimeString().slice(3,8);
+const startTheClock = () => clockrunner = setInterval(runTimer, 1000);
+const runTimer = () => {
+    timeCounter.setSeconds(timeCounter.getSeconds()+1);
+    displayTime();
+};  
+ const stopTheClock = () => clearInterval(clockrunner);
+</body>
+</html>
+Egy “Keresd a párját” játékot kell készítened
+A játékban két sorban soronként 5 azaz összesen 10 darab kártya látható
+A játék kezdetekor kártyák le vannak fordítva A kártyák másik oldala egy egyszerű ábrát tartalmaz
+Az ábrák szabadon választható képek, vagy akár ikonok is lehetnek a könnyebb felismerhetőség végett
+Minden ábrából összesen két darab van
+Amikor a játékos rákattint egy kártyára az egy egyszerű animáció kíséretében megfordul, felfedve az ábrát
+Az első kártyára való kattintáskor elindul egy számláló, ami a játékidőt mutatja perc/másodperc formában
+Amennyiben egymás után két felfordított kártyán ugyanaz az ábra szerepel, azokat felfordítva kell hagyni a játék végéig, többet nem lehet rájuk kattintani
+Amennyiben a két ábra eltérő, mind a kettőt automatikusan vissza kell fogatni
+A játéknak akkor van vége, amikor az összes kártya képes oldala látszik
+A számláló a játék végén megáll
+5 másodperc múlva a számláló nullázódik, és az összes kártya visszafordul, kezdődhet egy új játékcd ..
+cd
