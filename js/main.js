@@ -1,3 +1,4 @@
+
 (function () {
     // Icons for cards.
     const icons = [
